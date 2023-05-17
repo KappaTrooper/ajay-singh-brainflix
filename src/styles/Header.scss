@@ -1,0 +1,48 @@
+@use "./partials/variables.scss" as *;
+@use "partials/mixins" as *;
+@use "partials/font" as *;
+
+.header-item{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__header-item__search{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__searchInput{
+        padding-left: 25px;
+        background: url("../assets/Icons/search.svg") no-repeat left;
+        @include label_button-mobile;
+        border: 1px solid $Mercury;
+        border-radius: 4px;
+
+
+
+
+    &__avatar{
+        background-image: url("../assets/Images/Mohan-muruge.jpg");
+    }
+
+        
+        
+    }
+}
+
+
+@include for-tablet-up {
+    .header-item{
+        flex-direction: row;
+        justify-content: space-around;
+        
+
+    &__search{
+        flex-direction: row;
+    }
+    }
+}

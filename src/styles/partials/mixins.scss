@@ -1,0 +1,158 @@
+@use "font" as *;
+@use "variables" as *;
+
+// Desktop and Tablet Fonts
+
+@mixin page-header {
+    font-family: $AvenirBold;
+    font-size: 33px;
+    line-height: 44px;
+
+}
+
+@mixin section-header {
+    font-family: $AvenirBold;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+@mixin subheader {
+    font-family: $AvenirBold;
+    font-size: 14px;
+    line-height: 22px;
+
+}
+
+@mixin body-copy {
+    font-family: $AvenirRegular;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+@mixin label_button {
+    font-family: $AvenirRegular;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+
+// Mobile Fonts
+
+@mixin page-header-mobile {
+    font-family: $AvenirBold;
+    font-size: 24px;
+    line-height: 32px;
+
+}
+
+@mixin section-header-mobile {
+    font-family: $AvenirBold;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+@mixin subheader-mobile {
+    font-family: $AvenirBold;
+    font-size: 13px;
+    line-height: 18px;
+
+}
+
+@mixin body-copy-mobile {
+    font-family: $AvenirRegular;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+@mixin label_button-mobile {
+    font-family: $AvenirBold;
+    font-size: 10px;
+    line-height: 20px;
+}
+// Button Colors
+
+@mixin button-color {
+    background-color: $BrainFlix-Blue;
+    @include label_button;
+    color: $White;
+}
+
+@mixin button-hover-color {
+    background-color: $BrainFlix-DarkBlue;
+    color: $White;
+}
+
+@mixin dividers {
+    border: 1px solid $Mercury;
+}
+
+// Images
+
+@mixin video-thumbnail {
+    border-radius: 4px;
+    background-color: $Mercury;
+}
+
+// Avatar
+@mixin avatar-desktop {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: $Mercury;
+}
+
+@mixin avatar-mobile {
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+    background-color: $Mercury;
+}
+
+
+// Iconography
+
+@mixin logo-style {
+    height: 25px;
+    width: 120px;
+}
+
+@mixin button-height {
+    height: 40px;
+    border-radius: 4px;
+}
+
+@mixin button-width-desktop {
+    width: 150px;
+    padding-left: 32px;
+    padding-right: 32px;
+    
+}
+
+@mixin button-width-mobile {
+    width: 100%;
+}
+
+// padding - desktop
+@mixin padding-component-desktop {
+padding: 24px;
+}
+// padding - mobile
+@mixin padding-component-mobile {
+    padding: 16px;
+    }
+
+
+// Media Queries    
+
+@mixin for-phone-only {
+    @media (min-width: 319px) { @content; }
+  }
+
+
+  @mixin for-tablet-up {
+    @media (min-width: 767px) { @content; }
+  }
+
+  @mixin for-desktop-up {
+    @media (min-width: 1279px) { @content; }
+  }
