@@ -1,0 +1,90 @@
+@use "../styles/partials/variables.scss" as *;
+@use "../styles/partials/mixins.scss" as *;
+@use "../styles/partials/font.scss" as *;
+
+
+.header-item{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+
+    &__inputavatar {
+        display: flex;
+        flex-direction: row;
+        gap: 5%;
+        
+    }
+
+
+    &__searchInput{
+        background: url("../assets/Icons/search.svg") no-repeat scroll 7px 11px;
+        padding-left: 30px;
+        height: 40px;
+        // width:90%;
+        max-width: 240px;
+        margin: 16px 0 16px 0;
+        @include label_button-mobile;
+        border: 1px solid $Mercury;
+        border-radius: 4px;
+        
+    }
+
+    &__avatar {
+        height: 40px;
+        margin: 16px 0 16px 0;
+
+        
+    }
+
+    &__avatar-icon {
+        @include avatar-mobile;
+        object-fit: cover;
+        
+    }
+
+    &__button{
+        background: url("../assets/Icons/upload.svg") no-repeat left;
+        width: 100%;
+
+    }
+
+    & button {
+        @include button-height;
+        //  @include button-width-mobile;
+         @include button-color;
+         border: none;
+         width: 100%;
+         @include label_button-mobile;
+         
+         
+     
+         &:hover {
+             @include button-hover-color;
+         }
+
+         @include for-tablet-up {
+            @include button-width-desktop
+         }
+         
+     
+         
+     
+     }
+}
+
+
+@include for-tablet-up {
+    .header-item{
+        flex-direction: row;
+        justify-content: center;
+        gap: 3.125rem;
+        
+        
+
+   
+    }
+}
