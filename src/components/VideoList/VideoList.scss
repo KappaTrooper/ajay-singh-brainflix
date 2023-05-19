@@ -1,0 +1,21 @@
+.video__item {
+    display: flex;
+    gap: .625rem;
+
+
+&--header {
+    font-size: 15px;
+    color: black;
+}
+
+&--name {
+    color: gray;
+}
+
+&--img {
+    height: 50px;
+    width: 30px;
+}
+
+
+}
