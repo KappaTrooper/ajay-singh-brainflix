@@ -2,40 +2,57 @@
 @use "../styles/partials/mixins.scss" as *;
 @use "../styles/partials/font.scss" as *;
 
-
+* {
+    box-sizing: border-box;
+}
 .header-item{
     margin: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 0;
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        
+
+    }
 
 
 
     &__inputavatar {
         display: flex;
         flex-direction: row;
-        gap: 5%;
+        gap: 2%;
+        
         
     }
 
 
     &__searchInput{
+        display: flex;
+        justify-content: center;
         background: url("../assets/Icons/search.svg") no-repeat scroll 7px 11px;
-        padding-left: 30px;
+        padding-left: 2rem;
         height: 40px;
-        // width:90%;
+        width: 15vh;
         max-width: 240px;
         margin: 16px 0 16px 0;
         @include label_button-mobile;
         border: 1px solid $Mercury;
-        border-radius: 4px;
+        border-radius: .3125rem;
         
     }
 
     &__avatar {
         height: 40px;
-        margin: 16px 0 16px 0;
+        margin: 16px 0 0 0;
+        margin-left: 1rem;
 
         
     }
@@ -49,15 +66,20 @@
     &__button{
         background: url("../assets/Icons/upload.svg") no-repeat left;
         width: 100%;
+        
+        display: flex;
+        justify-content: center
 
     }
 
     & button {
         @include button-height;
         //  @include button-width-mobile;
+        width: 65%;
+        
          @include button-color;
          border: none;
-         width: 100%;
+        
          @include label_button-mobile;
          
          
@@ -81,10 +103,40 @@
     .header-item{
         flex-direction: row;
         justify-content: center;
+        justify-content: space-between;
+        padding: 0 1.5rem;
         gap: 3.125rem;
-        
-        
 
-   
+    &__logo {
+        display: flex;
+        width: 100%;
+        padding: 0;
+        margin-right: 1.5rem;
     }
+        
+        
+    &__searchInput {
+        width: 15.5rem;
+    height: 3rem;
+    margin-left: 2rem;
+    justify-content: flex-end;
+    margin-right: 1rem;
+        // might remove
+        &__button {
+            padding: 0;
+        }
+
+    
+
+    }
+
+    .header-item__avatar-icon {
+       @include avatar-desktop
+        
+        
+        
+    }
+
+
+}
 }

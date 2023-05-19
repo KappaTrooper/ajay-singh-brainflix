@@ -66,8 +66,8 @@
 
 @mixin label_button-mobile {
     font-family: $AvenirBold;
-    font-size: 15px;
-    line-height: 20px;
+    font-size: .9375rem;
+    line-height: 1.25rem;
 }
 // Button Colors
 
@@ -117,8 +117,8 @@
 }
 
 @mixin button-height {
-    height: 40px;
-    border-radius: 4px;
+    height: 2.5rem;
+    border-radius: .25rem;
 }
 
 @mixin button-width-desktop {
