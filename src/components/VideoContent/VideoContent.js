@@ -9,7 +9,7 @@ export default function VideoContent(props) {
       <h1 className="videoContent__title">{props.title}</h1>
       <div className="videoContent__info">
             <div className="videoContent__nameDate">
-              <p className="videoContent__name">By {props.channel}</p>
+              <p className="videoContent__name">by {props.channel}</p>
 
               <p className="videoContent__date">{new Date (props.timestamp).toLocaleDateString()}</p>
             </div>

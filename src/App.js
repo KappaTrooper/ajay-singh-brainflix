@@ -6,6 +6,7 @@ import VideoList from './components/VideoList/VideoList';
 
 // Grabs data from json
 import VideoData from './data/video-details.json';
+import VideoData_Video from './data/videos.json';
 
 
 // uses state
@@ -13,18 +14,19 @@ import { useState } from 'react';
 
 function App() {
   // sets default state to index 0 (BMX Rampage)
- const [videoOrder, setVideoOrder] = useState(1);
-// Turns videodata from json file into videoOrder and assigns variable
- const videoDetails = VideoData[videoOrder];
+ const [videoOrder, setVideoOrder] = useState(VideoData[0]);
 
-// gets data up from VideoList (data up action down)
-const handleImageClick = () => {
-  // videoOrder
-}
-
+// calling in onclick from VideoList component to change videoOrder
+const handleImageClick = (id) => {
+  // Find the video with the clicked ID in VideoData array
+  const videoClicked = VideoData.find((video) => video.id === id);
+  
+  // Set the new video object to setVideoOrder
+  setVideoOrder(videoClicked);
+};
 
 //  Fildering to not use whatever is in useState
- const filteredVideoData = VideoData.filter((video, index) => index !== videoOrder);
+ const filteredVideoData = VideoData_Video.filter((video) => video.id !== videoOrder.id);
  
 
 
@@ -41,16 +43,16 @@ const handleImageClick = () => {
     <div className='video-content'>
     {/* Props to use data from json */}
         <VideoContent
-          title={videoDetails.title}
-          channel={videoDetails.channel}
-          timestamp={videoDetails.timestamp}
-          views={videoDetails.views}
-          likes={videoDetails.likes}
-          description={videoDetails.description}
+          title={videoOrder.title}
+          channel={videoOrder.channel}
+          timestamp={videoOrder.timestamp}
+          views={videoOrder.views}
+          likes={videoOrder.likes}
+          description={videoOrder.description}
         />
       </div>
 
-<div className='video-List'>
+<div className='video-ist'>
 <VideoList videoData={filteredVideoData} onImageClick={handleImageClick}  />
 </div>
 

@@ -11,9 +11,9 @@ export default function VideoList(props) {
 
         <ul className='video__list'>
         {videoData.map((video) => (
-          <div className='video__item'>
+          <div className='video__item' onClick={() => onImageClick (video.id) }>
           {/* making onclick for button which calls onImageClick on props  */}
-          <div className='video__item--image' onClick={() => onImageClick()}>
+          <div className='video__item--image' >
               <img className='video__item--img' src={video.image} alt='Video Image'   />
             </div>
 
