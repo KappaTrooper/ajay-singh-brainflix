@@ -1,6 +1,6 @@
-@use "../styles/partials/variables.scss" as *;
-@use "../styles/partials/mixins.scss" as *;
-@use "../styles/partials/font.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/font.scss" as *;
 
 * {
     box-sizing: border-box;
@@ -37,7 +37,7 @@
     &__searchInput{
         display: flex;
         justify-content: center;
-        background: url("../assets/Icons/search.svg") no-repeat scroll 7px 11px;
+        background: url("../../assets/Icons/search.svg") no-repeat scroll 7px 11px;
         padding-left: 2rem;
         height: 40px;
         width: 15vh;
@@ -64,7 +64,7 @@
     }
 
     &__button{
-        background: url("../assets/Icons/upload.svg") no-repeat left;
+        background: url("../../assets/Icons/upload.svg") no-repeat left;
         width: 100%;
         
         display: flex;

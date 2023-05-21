@@ -1,8 +1,8 @@
-import "./Header.scss";
+import "./Header.scss"; 
 
-import { ReactComponent as Logo } from "../assets/Logo/BrainFlix-logo.svg";
+import { ReactComponent as Logo } from "../../assets/Logo/BrainFlix-logo.svg";
 
-import AvatarImg from "../assets/Images/Mohan-muruge.jpg";
+import AvatarImage from "../../assets/Images/Mohan-muruge.jpg";
 
 
 
@@ -23,7 +23,7 @@ export default function Header() {
           </div>
 
           <div className="header-item__avatar">
-            <img src={AvatarImg} alt="Avatar Img" className="header-item__avatar-icon" />
+            <img src={AvatarImage} alt="Avatar Img" className="header-item__avatar-icon" />
           </div>
         </div>
 

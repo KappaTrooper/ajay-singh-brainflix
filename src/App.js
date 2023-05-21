@@ -1,8 +1,9 @@
 import './styles/App.scss';
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import Video from './components/Video/Video';
 import VideoContent from './components/VideoContent/VideoContent';
 import VideoList from './components/VideoList/VideoList';
+import CommentForm from './components/comment-form/CommentForm';
 
 // Grabs data from json
 import VideoData from './data/video-details.json';
@@ -18,14 +19,14 @@ function App() {
 
 // calling in onclick from VideoList component to change videoOrder
 const handleImageClick = (id) => {
-  // Find the video with the clicked ID in VideoData array
+  // using find to find ID of video with ID of video
   const videoClicked = VideoData.find((video) => video.id === id);
   
-  // Set the new video object to setVideoOrder
+  // Setting the state to new videoclicked
   setVideoOrder(videoClicked);
 };
 
-//  Fildering to not use whatever is in useState
+//  Fildering to not use whatever is in usestate
  const filteredVideoData = VideoData_Video.filter((video) => video.id !== videoOrder.id);
  
 
@@ -40,6 +41,8 @@ const handleImageClick = (id) => {
       <Video/>
     </div>
 
+    
+
     <div className='video-content'>
     {/* Props to use data from json */}
         <VideoContent
@@ -52,9 +55,17 @@ const handleImageClick = (id) => {
         />
       </div>
 
-<div className='video-ist'>
+      <div className='commentform'>
+<CommentForm />
+
+
+</div>
+
+<div className='video-list'>
 <VideoList videoData={filteredVideoData} onImageClick={handleImageClick}  />
 </div>
+
+
 
 
 
