@@ -103,8 +103,9 @@
 
 @mixin avatar-mobile {
     border-radius: 50%;
-    height: 2.25rem;   
-    width: 2.25rem;
+    height: 35px;   
+    width: 40px;
+    object-fit: fill;
     background-color: $Mercury;
 }
 

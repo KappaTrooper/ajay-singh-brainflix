@@ -2,7 +2,7 @@ import "./CommentList.scss";
 import React from 'react'
 
 export default function CommentList(props) {
-  const { comments } = props; // Destructure the comments prop
+  const { comments } = props; 
 
   return (
     <ul className='comment-list'>
