@@ -5,34 +5,34 @@ import "./VideoContent.scss";
 
 export default function VideoContent(props) {
   return (
-    <div className="videoContent">
-      <h1 className="videoContent__title">{props.title}</h1>
-      <div className="videoContent__info">
-            <div className="videoContent__nameDate">
-              <p className="videoContent__name">by {props.channel}</p>
+    <div className="video-content">
+      <h1 className="video-content__title">{props.title}</h1>
+      <div className="video-content__info">
+            <div className="video-content__nameDate">
+              <p className="video-content__name">by {props.channel}</p>
 
-              <p className="videoContent__date">{new Date (props.timestamp).toLocaleDateString()}</p>
+              <p className="video-content__date">{new Date (props.timestamp).toLocaleDateString()}</p>
             </div>
 
-            <div className="videoContent__viewsLikes">
-              <div className="videoContent__view">
+            <div className="video-content__viewsLikes">
+              <div className="video-content__view">
                 
-                <p className="videoContent__viewCounter"> <img className="videocontent__viessimg" src={ViewLogo} alt='views'/> {props.views}</p>
+                <p className="video-content__viewCounter"> <img className="videocontent__viessimg" src={ViewLogo} alt='views'/> {props.views}</p>
               </div>
 
-              <div className="videoContent__likes">
+              <div className="video-content__likes">
               
-                <p className="videoContent__likeCounter"> <img className="videocontent__likeimg" src={LikeLogo} alt='views'/>{props.likes}</p>
+                <p className="video-content__likeCounter"> <img className="videocontent__likeimg" src={LikeLogo} alt='views'/>{props.likes}</p>
               </div>
             </div>
           </div>
 
-      <div className="videoContent__description">
+      <div className="video-content__description">
         <p>
          {props.description}
         </p>
 
-        <p className="videoContent__comments">3 Comments</p>
+        <p className="video-content__comments"> {props.comments.length} Comments</p>
       </div>
     </div>
   );
