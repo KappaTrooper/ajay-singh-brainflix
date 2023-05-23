@@ -9,7 +9,7 @@ export default function VideoContent(props) {
       <h1 className="video-content__title">{props.title}</h1>
       <div className="video-content__info">
             <div className="video-content__nameDate">
-              <p className="video-content__name">by {props.channel}</p>
+              <p className="video-content__name">By {props.channel}</p>
 
               <p className="video-content__date">{new Date (props.timestamp).toLocaleDateString()}</p>
             </div>
@@ -17,12 +17,12 @@ export default function VideoContent(props) {
             <div className="video-content__viewsLikes">
               <div className="video-content__view">
                 
-                <p className="video-content__viewCounter"> <img className="videocontent__viessimg" src={ViewLogo} alt='views'/> {props.views}</p>
+                <p className="video-content__view-counter"> <img className="video-content__icon" src={ViewLogo} alt='views'/> {props.views}</p>
               </div>
 
               <div className="video-content__likes">
               
-                <p className="video-content__likeCounter"> <img className="videocontent__likeimg" src={LikeLogo} alt='views'/>{props.likes}</p>
+                <p className="video-content__like-counter"> <img className="video-content__icon" src={LikeLogo} alt='views'/>{props.likes}</p>
               </div>
             </div>
           </div>

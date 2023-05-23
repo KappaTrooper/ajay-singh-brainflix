@@ -142,6 +142,13 @@ padding: 24px;
     padding: 16px;
     }
 
+// Input 
+@mixin input {
+    border: solid 1px $Silver;
+    border-radius: 4px;
+    background-color: $Alabaster;
+}
+
 
 // Media Queries    
 

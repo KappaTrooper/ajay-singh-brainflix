@@ -1,8 +1,0 @@
-@use "./partials/variables.scss" as *;
-@use "partials/mixins" as *;
-@use "partials/font" as *;
-
-
-img {
-    @include avatar-mobile
-}

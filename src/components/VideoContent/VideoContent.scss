@@ -2,105 +2,112 @@
 @use "../../styles/partials/mixins.scss" as *;
 @use "../../styles/partials/font.scss" as *;
 
+* {
+  font-family: $AvenirRegular;
 
+  .video-content {
+margin: 1rem;
+  
+  &__info {
+      display: flex;
+      gap: 5rem;
+      border-bottom: solid 1px $Mercury;
+    }
 
-
-.videoContent{
-    width: 100%;
-    padding: 0 1rem;
-
- & p {
-    padding: 1rem 0;
-    font-size: 13px;
-    font-weight: 400;
-
-}
-
-&__info {
-    display: flex;
+    &__title {
+      padding: 1rem 0;
+      border-bottom: solid 1px $Mercury;
+      font-family: $AvenirRegular;
+    }
     
-    gap: -10px;
-    border-bottom: solid 1px green;
-
-}
-
-&__title {
-    padding: 1.5rem 0;
-    border-bottom: solid 1px green;
-    font-weight: 700;
-    font-size: 24px;
-}
-
-&__name {
-    padding-bottom: 1rem;
-    font-weight: 700;
-}
-    
-
-&__info{
-    display: flex;
-    
-    gap: 3.125rem;
-
-&__viewslikes{
-    display: flex ;
-
-   
-}
-&__view {
-   background-color: lightcoral;
-}
-}
-&__view {
-    display: flex;
- }
-
- &__likes {
-    display: flex;
- }
-
- &__description {
-    padding: 1rem 0;
-    font-size: 13px;
-    font-weight: 400;
- }
-
-
- &__comments{
-    padding-bottom: 1rem;
-    font-size: 14px;
-    font-weight: 700;
- }
-
-
- 
-}
-
-
-@media only screen and (min-width: 767px) {
- 
-
-    .videoContent {
-        
-        padding: 0 2.25rem;
 
     &__info {
-        justify-content: space-between;
-    }
-
-    &__nameDate {
+      &__viewsLikes {
         display: flex;
-        gap: 2.625rem;
+     
+      }
+
+
     }
 
+    &__name {
+        font-size: 13px;
+        font-family: $AvenirBold;
+    }
     &__viewsLikes {
-        display: flex;
-        gap: 2.625rem;
+        color: $Silver;
     }
 
+    &__date {
+      color: $Silver;
     }
 
+    &__icon {
+        margin-right: 0.5rem;
+    }
+   
 
+    &__view {
+      display: flex;
+      height: 2rem;
+    }
 
+    &__description {
+        
+     @include section-header-mobile;
+     
+      
+    }
+
+    &__comments {
+        @include section-header-mobile;
+    }
   }
 
+  @media only screen and (min-width: 767px) {
+  
+    .video-content {
+      padding: 0 2.25rem;
+        
+      &__info {
+        justify-content: space-between;
+      }
+
+      &__nameDate {
+        display: flex;
+        
+
+        gap: 2.625rem;
+      }
+
+      &__viewsLikes {
+        display: flex;
+        gap: 2.625rem;
+      }
+
+      &__description {
+        
+        @include section-header-mobile;
+        
+        
+       }
+
+
+      &__comments {
+        @include section-header;
+    }
+
+    }
+  }
+
+
+
+  @include for-desktop-up {
+    .video-content {
+      max-width: 1280px;
+    }
+  }
+
+
+
+}

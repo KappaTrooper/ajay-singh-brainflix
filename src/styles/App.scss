@@ -1,0 +1,46 @@
+@use "../styles/partials/variables.scss" as *;
+@use "../styles/partials/mixins.scss" as *;
+@use "../styles/partials/font.scss" as *;
+
+
+* {
+
+
+    @include for-desktop-up {
+
+        .brain-header {
+        margin: 0 auto;
+          max-width: 1280px;
+        }
+
+
+        .desktop-design{
+            display: flex;
+            justify-content: center;
+        }
+
+        .desktop-design__container{
+            flex-direction: column;
+            
+            padding-left: 7.5rem;
+            max-width: 1280px;
+        }
+
+        .video-list{
+            padding-right: 10%;
+            border-left: solid 1px $Mercury;
+        }
+    }
+
+
+    
+
+
+
+
+
+
+
+
+
+}

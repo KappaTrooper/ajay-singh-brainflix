@@ -1,0 +1,64 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/font.scss" as *;
+
+* {
+  font-family: $AvenirRegular;
+
+  .comment-list {
+    margin: 0;
+    padding-left: 7%;
+    padding-right: 10%;
+  
+    &__avatar {
+      margin-top: 1rem;
+      @include avatar-mobile;
+    }
+  
+    @include for-tablet-up {
+      &__avatar {
+        margin-top: 1rem;
+        @include avatar-desktop;
+      }
+    }
+  
+    &__date {
+      color: $Silver;
+    }
+  
+    &__container {
+      display: flex;
+      gap: 3%;
+  
+      @include for-desktop-up {
+        height: 8.75rem;
+      }
+    }
+  
+    &__namedate {
+      display: flex;
+      align-items: center;
+    }
+  
+    &__name {
+      flex: 0 0 70%;
+    }
+  
+    &__date {
+      flex: 0 0 30%; 
+      text-align: right;
+    }
+  
+    &__item {
+      list-style: none;
+      border-bottom: 1px solid $Mercury;
+    }
+  
+    &__item:first-child {
+      margin-top: 1rem;
+      border-top: 1px solid $Mercury;
+    }
+  }
+  
+
+}

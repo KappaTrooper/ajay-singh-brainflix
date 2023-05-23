@@ -1,0 +1,43 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/font.scss" as *;
+
+* {
+  box-sizing: border-box;
+
+  .video-item{
+    margin-top: 1rem;
+  background-color: $BrainFlix-DarkBlack;
+  width: 100%;
+  
+
+
+  &__box {
+    object-fit: fill;
+    aspect-ratio: 16/9;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    
+
+    @include for-tablet-up {
+      width: 95%;
+      padding: 0 2rem ;
+    }
+
+    @include for-desktop-up {
+      width: 85rem;
+    }
+
+
+
+
+
+  }
+
+
+  }
+
+
+}
+

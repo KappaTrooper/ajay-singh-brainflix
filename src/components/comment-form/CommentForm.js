@@ -1,32 +1,44 @@
-import React from 'react'
-import './CommentForm.scss'
-
+import React from "react";
+import "./CommentForm.scss";
+import add from "../../assets/Icons/add_comment.svg";
+import AvatarImage from "../../assets/Images/Mohan-muruge.jpg";
 
 export default function CommentForm() {
   return (
     <>
+      <div className="form-item">
+        <div className="form-item__container">
+          <div className="form-item__containerone">
+            <img
+              src={AvatarImage}
+              alt="Avatar Img"
+              className="header-item__avatar--icon"
+            />
+          </div>
 
+          <div className="form-item__containertwo">
+            <div className="form-item__tabletcontainer">
+              <div className="form-item__tablet">
+                <label className="form-item__label">
+                  JOIN THE CONVERSATION
+                </label>
 
-<div className='form-item'>
-<label className='form-item__label'>JOIN THE CONVERSATION</label>
-<div className='form-item_box'>
-<input className='form-item__input' placeholder='Add a new comment'/>
+                <input
+                  className="form-item__input"
+                  placeholder="Add a new comment"
+                />
+              </div>
 
-<button className='form-item__button'>COMMENT</button>
-
-
-</div>
-<img className='form-item__icon' src="" alt='post'/>
-<img className='form-item__avatar' src="" alt='avatar'/>
-</div>
-
-
-
-
-
-
-
-
+              <div className="form-item__tablet">
+                <button type="button" className="form-item__button">
+                  <img className="form-item-image" src={add} alt="upload" />
+                  <h3 className="form-item__button--text">COMMENT</h3>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
-  )
+  );
 }
