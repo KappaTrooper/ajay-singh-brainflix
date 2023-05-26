@@ -7,7 +7,6 @@ import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 
 
 function App() {
-  let { videoId } = useParams();
 
  
   return (

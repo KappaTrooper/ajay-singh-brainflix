@@ -1,5 +1,8 @@
 // VideoList.js
 import React from 'react';
+
+import { Link } from "react-router-dom";
+
 import './VideoList.scss';
 
 export default function VideoList(props) {
@@ -12,11 +15,14 @@ export default function VideoList(props) {
     <section className="video">
       <h3 className="video__header">NEXT VIDEOS</h3>
       <ul className="video__list">
+    
         {videoList.map(video => (
+          <Link to={`/videos/${video.id}`} key={video.id} className="video__link">
+        
           <div
-            key={video.id}
+            
             className="video__item"
-            onClick={() => onImageClick(video.id)}
+            // onClick={() => onImageClick(video.id)}
           >
             <div className="video__item--image">
               <img
@@ -33,6 +39,7 @@ export default function VideoList(props) {
               </div>
             </div>
           </div>
+          </Link>
         ))}
       </ul>
     </section>
