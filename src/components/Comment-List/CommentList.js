@@ -1,8 +1,8 @@
 import "./CommentList.scss";
 import React from 'react'
 
-export default function CommentList(props) {
-  const { comments } = props; 
+export default function CommentList({ comments }) {
+  // const { comments } = props; 
 
   return (
     <ul className='comment-list'>

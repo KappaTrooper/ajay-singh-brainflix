@@ -32,7 +32,7 @@ export default function VideoContent(props) {
          {props.description}
         </p>
 
-        <p className="video-content__comments"> {props.comments.length} Comments</p>
+        {/* <p className="video-content__comments"> {props.comments.length} Comments</p> */}
       </div>
     </div>
   );
