@@ -8,12 +8,11 @@ import CommentForm from '../../components/comment-form/CommentForm';
 import CommentList from '../../components/Comment-List/CommentList';
 import { API_URL, API_KEY } from '../../utilities/ApiPage';
 import VideoData from '../../data/video-details.json';
-import VideoData_Video from '../../data/videos.json';
 import { useParams } from 'react-router-dom';
 
 export default function Main() {
   // Params not done yet
-  const { videoId } = useParams();
+  const { defaultVideoId } = useParams();
   // videoOrder is current video and videoList is the list of videos
   const [videoOrder, setVideoOrder] = useState({});
   const [videoList, setVideoList] = useState([]);
