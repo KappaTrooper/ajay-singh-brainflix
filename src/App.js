@@ -1,5 +1,4 @@
 import "./styles/App.scss";
-import Header from "./components/Header/Header";
 import Main from "./pages/main/Main";
 import Upload from "./pages/upload/Upload";
 import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
@@ -15,7 +14,6 @@ function App() {
 
     <BrowserRouter>
    
-        <Header />
  
       
       <Routes>

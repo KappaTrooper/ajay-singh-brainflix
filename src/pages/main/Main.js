@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Header from "../../components/Header/Header";
+
 import Video from '../../components/Video/Video';
 import VideoContent from '../../components/VideoContent/VideoContent';
 import VideoList from '../../components/VideoList/VideoList';
@@ -58,6 +60,11 @@ export default function Main() {
 
   return (
     <>
+
+    <div className='header'>
+    <Header />
+
+    </div>
       <div className="video">
         <Video image={Currentvideo.image} />
       </div>
