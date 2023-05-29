@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Header from "../../components/Header/Header";
+import Header from "../../Components/Header/Header";
 import UploadView from "../../assets/Images/Upload-video-preview.jpg";
 import uploadImage from "../../assets/Icons/upload.svg";
 

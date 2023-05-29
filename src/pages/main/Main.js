@@ -1,13 +1,13 @@
 import './Main.scss';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Header from "../../components/Header/Header";
+import Header from "../../Components/Header/Header";
 
-import Video from '../../components/Video/Video';
-import VideoContent from '../../components/VideoContent/VideoContent';
-import VideoList from '../../components/VideoList/VideoList';
-import CommentForm from '../../components/comment-form/CommentForm';
-import CommentList from '../../components/Comment-List/CommentList';
+import Video from '../../Components/Video/Video';
+import VideoContent from '../../Components/VideoContent/VideoContent';
+import VideoList from '../../Components/VideoList/VideoList';
+import CommentForm from '../../Components/comment-form/CommentForm';
+import CommentList from '../../Components/Comment-List/CommentList';
 import { API_URL, API_KEY } from '../../utilities/ApiPage';
 
 import { useParams } from 'react-router-dom';
