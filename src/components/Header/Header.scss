@@ -4,7 +4,8 @@
 
 * {
   box-sizing: border-box;
-}
+
+
 
 .header-item {
     
@@ -12,6 +13,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 
 
 
@@ -37,7 +39,7 @@
             padding-left: 3rem;
             height: 40px;
             width: 15vh;
-            max-width: 240px;
+            
             margin: 0 0 1rem 0;
             border-radius: 5px;
             border: 1px solid $Mercury;
@@ -54,8 +56,19 @@
         
     }
 
+    &__button--link {
+        text-decoration: none;
+        @include for-desktop-up{
+            width: 100px
+           }
+     
+    }
+
+
     &__button{
        width: 80%;
+
+      
        
        
        @include body-copy-mobile;
@@ -69,7 +82,11 @@
             align-items: center;
             justify-content: flex-start;
             gap: 30%;
+            padding-right: 50px;
 
+            @include for-desktop-up {
+                padding-right: 90px;
+            }
          
             
             
@@ -137,6 +154,12 @@
         justify-content: center;
         
         
+        @include max-limit;
+        margin-top: 16px;
+        gap: 34rem;
+        
+        
+        
         
 
         &__wrapper {
@@ -152,4 +175,4 @@
 
 
 
-  
+}

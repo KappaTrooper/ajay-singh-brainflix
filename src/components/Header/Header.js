@@ -38,7 +38,7 @@ export default function Header() {
           </div>
        
 
-          <Link to ="/upload">
+          <Link to ="/upload" className="header-item__button--link">
         <div className="header-item__button">
           <button type="button" className="header-item__button--item">
            

@@ -3,6 +3,18 @@
 
 // Desktop and Tablet Fonts
 
+@mixin max-limit {
+    max-width: 1280px;
+    margin: auto;
+    padding: auto;
+}
+
+@mixin margin-limit {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 @mixin page-header {
     font-family: $AvenirBold;
     font-size: 33px;
