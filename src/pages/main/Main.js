@@ -73,14 +73,8 @@ export default function Main() {
       <div className="desktop-design">
         <div className="desktop-design__container">
           <div className="video-content">
-            <VideoContent
-              title={Currentvideo.title}
-              channel={Currentvideo.channel}
-              timestamp={Currentvideo.timestamp}
-              views={Currentvideo.views}
-              likes={Currentvideo.likes}
-              description={Currentvideo.description}
-              comments={Currentvideo.comments}
+            <VideoContent {...Currentvideo}
+           
             />
           </div>
 
@@ -89,7 +83,7 @@ export default function Main() {
           </div>
 
           <div className="commentlist">
-            <CommentList comments={Currentvideo.comments} />
+            <CommentList {...Currentvideo} />
           </div>
         </div>
 
