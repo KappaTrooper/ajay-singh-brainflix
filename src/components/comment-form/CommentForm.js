@@ -8,7 +8,7 @@ export default function CommentForm() {
     <>
       <div className="form-item">
         <div className="form-item__container">
-          <div className="form-item__containerone">
+          <div className="form-item__avatar-item">
             <img
               src={AvatarImage}
               alt="Avatar Img"
@@ -16,8 +16,8 @@ export default function CommentForm() {
             />
           </div>
 
-          <div className="form-item__containertwo">
-            <div className="form-item__tabletcontainer">
+          <div className="form-item__form-item">
+            <div className="form-item__form-item">
               <div className="form-item__tablet">
                 <label className="form-item__label">
                   JOIN THE CONVERSATION

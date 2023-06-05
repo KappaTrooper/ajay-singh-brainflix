@@ -1,14 +1,14 @@
 import './Main.scss';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Header from "../../Components/Header/Header";
+import Header from "../../Components/header/Header";
 
-import Video from '../../Components/Video/Video';
-import VideoContent from '../../Components/VideoContent/VideoContent';
-import VideoList from '../../Components/VideoList/VideoList';
+import Video from '../../Components/video/Video';
+import VideoContent from '../../Components/videoContent/VideoContent';
+import VideoList from '../../Components/videoList/VideoList';
 import CommentForm from '../../Components/comment-form/CommentForm';
-import CommentList from '../../Components/Comment-List/CommentList';
-import { API_URL, API_KEY } from '../../utilities/ApiPage';
+import CommentList from '../../Components/comment-List/CommentList';
+import { API_URL } from '../../utilities/ApiPage';
 
 import { useParams } from 'react-router-dom';
 
@@ -22,15 +22,15 @@ export default function Main() {
   // CurrentVideo useEffect and API Call
   useEffect(() => {
     if (!videoId) {
-      axios.get(`${API_URL}/videos${API_KEY}`)
+      axios.get(`${API_URL}/videos`)
         .then(response => {
-          return axios.get(`${API_URL}/videos/${response.data[0].id}${API_KEY}`)
+          return axios.get(`${API_URL}/videos/${response.data[0].id}`)
         })
         .then(response => {
           setCurrentvideo(response.data);
         })
     } else {
-      axios.get(`${API_URL}/videos/${videoId}${API_KEY}`)
+      axios.get(`${API_URL}/videos/${videoId}`)
         .then(response => {
           setCurrentvideo(response.data);
         })
@@ -40,7 +40,7 @@ export default function Main() {
 
   // Videolist useEffect and API Call
   useEffect(() => {
-    axios.get(`${API_URL}/videos${API_KEY}`)
+    axios.get(`${API_URL}/videos`)
       .then(response => {
         setVideoList(response.data);
         console.log(response.data);
