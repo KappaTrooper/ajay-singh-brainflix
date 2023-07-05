@@ -33,7 +33,6 @@ Comment section
 Upload Page
 ![App Screenshot](https://i.imgur.com/BBtFsnC.png)
 
-Mobile View
 ![App Screenshot](https://i.imgur.com/r6uSW44.png)
 
 
